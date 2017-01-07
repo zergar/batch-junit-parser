@@ -1,6 +1,6 @@
 {
   "name": "batch-junit-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tool which converts a bunch of JUnit-Result-XML-files into one single json for further use.",
   "main": "parseXml.js",
   "scripts": {
