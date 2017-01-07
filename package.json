@@ -1,0 +1,22 @@
+{
+  "name": "batch-junit-parser",
+  "version": "1.0.0",
+  "description": "A tool which converts a bunch of JUnit-Result-XML-files into one single json for further use.",
+  "main": "parseXml.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "junit",
+    "batch",
+    "parser",
+    "xml"
+  ],
+  "author": "zergar",
+  "license": "ISC",
+  "dependencies": {
+    "fs-promise": "^1.0.0",
+    "path": "^0.12.7",
+    "xml2js": "^0.4.17"
+  }
+}
