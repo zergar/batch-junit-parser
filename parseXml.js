@@ -1,6 +1,7 @@
 'use strict';
 
 const fs_prom = require('fs-promise'),
+    fs = require('fs'),
     path = require('path'),
     xml2js = require('xml2js');
 
@@ -31,8 +32,9 @@ let parseXml = (xml) => {
 
 let readDir = (stat, file) => {
     return new Promise((resolve, reject) => {
-        if (stat.isDirectory()) {
-            fs_prom.readFile(path.join(basePathGlobal, file, 'result.xml'), {encoding: 'utf8'})
+        let completePath = path.join(basePathGlobal, file, 'result.xml');
+        if (stat.isDirectory() && fs.existsSync(completePath)) {
+            fs_prom.readFile(completePath, {encoding: 'utf8'})
                 .then(parseXml)
                 .then(result => {
                     result['name'] = file;
